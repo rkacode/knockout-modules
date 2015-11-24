@@ -1,0 +1,104 @@
+<html>
+<head>
+    <link href="css/bootstrap.css" rel="stylesheet"/>
+    <link href="css/jquery-ui.css" rel="stylesheet"/>
+    <link href="css/jquery-ui.structure.css" rel="stylesheet"/>
+    <link href="css/theme.css" rel="stylesheet"/>
+    <link href="css/quill.base.css" rel="stylesheet"/>
+    <link href="css/quill.snow.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="js/require-setup.js"></script>
+    <script type="text/javascript"
+            src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.11/require.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <title>Bootstrap</title>
+</head>
+<body>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <strong>Trip general information and description</strong>
+        <a class="btn btn-default pull-right" data-bind="click: saveChanges">Save changes</a>
+    </div>
+    <div class="panel-body">
+        <div class="form-group">
+            <label>Trip name</label>
+            <input type="text" class="form-control" data-bind="textInput: name"/>
+        </div>
+
+        <div class="form-group">
+            <label>Time before reservation</label>
+            <input type="text" class="form-control" style="width: 60px;"
+                   data-bind="spinner: { value: minutes, min: 0, max: 60 }"/>
+
+
+        </div>
+
+        <div class="form-group">
+            <label for="ticketName"> From date </label>
+            <input type="text" class="form-control" id="fromDate"
+                   data-bind="datepicker: { dateFormat: 'dd/mm/yy' }, textInput: fromDate"/>
+        </div>
+
+        <div class="form-group">
+            <label>Short description</label>
+            <!--<textarea data-bind="wysiwyg : shortDescription, wysiwygConfig: { statusbar: false, menubar: false }"></textarea>-->
+            <div id="basic"></div>
+        </div>
+
+        <!--<div class="form-group">
+            <label for="city"> Destination </label>
+            <select class="form-control" name="city" data-bind="options: cities,
+                                                value: selectedCity,
+                                                optionsText: 'name',
+                                                optionsCaption: 'Choose...',
+                                                event: { change: cityChanged }">
+
+            </select>
+            <span class="validationMessage" data-bind="validationMessage: info.destination"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="saleType">Sale type</label>
+
+            <div data-bind="validationOptions: {insertMessages: false}">
+                <input type="radio" name="saleType" value="ON_REQUEST" data-bind="checked: info.saleType"/> On demand
+                <br/>
+                <input type="radio" name="saleType" value="FREE_SALE" data-bind="checked: info.saleType"/> Free sale
+            </div>
+
+            <span class="validationMessage" data-bind="validationMessage: info.saleType"></span>
+        </div>
+
+
+
+
+
+        <div class="form-group">
+            <label>Highlights</label>
+
+            <div>
+                <a class="dc-link" data-bind="click: info.addHighlight">
+                    <i class="fa fa-plus-square-o"> add </i>
+                </a>
+            </div>
+
+            <div data-bind="foreach: info.highlights">
+                <div class="form-group">
+                    <input type="text" maxlength="256" class="form-control" data-bind="textInput: $rawData"/>
+                </div>
+            </div>
+        </div>-->
+    </div>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
